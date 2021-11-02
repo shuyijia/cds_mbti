@@ -14,7 +14,7 @@ nltk.download('wordnet')
 
 data = pd.read_csv('./dataset/mbti_1.csv', converters={'type': str.strip, 'posts': str.strip})
 
-tok = spacy.load('en')
+tok = spacy.load('en_core_web_sm')
 
 def tokenize(text):
   lemmatizer = WordNetLemmatizer()
